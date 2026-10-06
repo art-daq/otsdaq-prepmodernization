@@ -1,5 +1,8 @@
 name: Git Whitespace Check Workflow
 
+permissions:
+  contents: read
+
 on:
   push:
     branches:
@@ -19,4 +22,3 @@ jobs:
     uses: art-daq/.github/.github/workflows/git-whitespace.yml@stable
     with:
       against-ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event_name == 'push' && github.event.before || 0 }}
-      exclude-directories: "firmware/"
