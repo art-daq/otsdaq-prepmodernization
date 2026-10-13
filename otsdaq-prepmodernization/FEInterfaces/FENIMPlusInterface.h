@@ -1,5 +1,5 @@
-#ifndef _ots_FENIMPlusInterface_h_
-#define _ots_FENIMPlusInterface_h_
+#ifndef OTSDAQ_PREPMODERNIZATION_OTSDAQ_PREPMODERNIZATION_FEINTERFACES_FENIMPLUSINTERFACE_H_
+#define OTSDAQ_PREPMODERNIZATION_OTSDAQ_PREPMODERNIZATION_FEINTERFACES_FENIMPLUSINTERFACE_H_
 
 //#include "otsdaq-components/FEInterfaces/FEOtsUDPHardwareBaseInterface.h"
 #include <bitset>
@@ -59,4 +59,4 @@ class FENIMPlusInterface : public FEOtsUDPTemplateInterface
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_PREPMODERNIZATION_OTSDAQ_PREPMODERNIZATION_FEINTERFACES_FENIMPLUSINTERFACE_H_

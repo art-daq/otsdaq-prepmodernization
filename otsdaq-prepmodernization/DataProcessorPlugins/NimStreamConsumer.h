@@ -1,5 +1,5 @@
-#ifndef _ots_NimStreamConsumer_h_
-#define _ots_NimStreamConsumer_h_
+#ifndef OTSDAQ_PREPMODERNIZATION_OTSDAQ_PREPMODERNIZATION_DATAPROCESSORPLUGINS_NIMSTREAMCONSUMER_H_
+#define OTSDAQ_PREPMODERNIZATION_OTSDAQ_PREPMODERNIZATION_DATAPROCESSORPLUGINS_NIMSTREAMCONSUMER_H_
 
 //#include "otsdaq/DataManager/DataConsumer.h"
 //#include "otsdaq/Configurable/Configurable.h"
@@ -55,4 +55,4 @@ class NimStreamConsumer : public VisualVConsumer
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_PREPMODERNIZATION_OTSDAQ_PREPMODERNIZATION_DATAPROCESSORPLUGINS_NIMSTREAMCONSUMER_H_
