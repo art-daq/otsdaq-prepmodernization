@@ -9,6 +9,8 @@
 ///
 #include "otsdaq/DataManager/RawDataSaverConsumerBase.h"
 
+#include <string>
+
 namespace ots
 {
 class BurstDataAndTimeSaverConsumer : public RawDataSaverConsumerBase

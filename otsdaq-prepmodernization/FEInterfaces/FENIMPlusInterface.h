@@ -3,6 +3,7 @@
 
 //#include "otsdaq-components/FEInterfaces/FEOtsUDPHardwareBaseInterface.h"
 #include <bitset>
+#include <string>
 #include "otsdaq-components/FEInterfaces/FEOtsUDPTemplateInterface.h"
 
 namespace ots
