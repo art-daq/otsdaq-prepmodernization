@@ -1,5 +1,5 @@
-#ifndef _ots_BurstDataAndTimeSaverConsumer_h_
-#define _ots_BurstDataAndTimeSaverConsumer_h_
+#ifndef OTSDAQ_PREPMODERNIZATION_OTSDAQ_PREPMODERNIZATION_DATAPROCESSORPLUGINS_BURSTDATAANDTIMESAVERCONSUMER_H_
+#define OTSDAQ_PREPMODERNIZATION_OTSDAQ_PREPMODERNIZATION_DATAPROCESSORPLUGINS_BURSTDATAANDTIMESAVERCONSUMER_H_
 
 /// This is the basic example of a raw data saver plugin.
 /// It can be used as is and it will save the data taken from a buffer in binary format
@@ -8,6 +8,8 @@
 /// doing.
 ///
 #include "otsdaq/DataManager/RawDataSaverConsumerBase.h"
+
+#include <string>
 
 namespace ots
 {
@@ -26,4 +28,4 @@ class BurstDataAndTimeSaverConsumer : public RawDataSaverConsumerBase
 };
 }  // namespace ots
 
-#endif
+#endif  // OTSDAQ_PREPMODERNIZATION_OTSDAQ_PREPMODERNIZATION_DATAPROCESSORPLUGINS_BURSTDATAANDTIMESAVERCONSUMER_H_
