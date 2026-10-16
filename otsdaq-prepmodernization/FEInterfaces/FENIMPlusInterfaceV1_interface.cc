@@ -93,7 +93,7 @@ void FENIMPlusInterfaceV1::configure(void)
 	               ? (optionalLink.getNode("ExternalClockSource").getValue<unsigned int>()
 	                      ? (optionalLink.getNode("ExternalClockSource")
 	                             .getValue<unsigned int>() -
-	                         1) //subtract 1 to normal index
+	                         1)  //subtract 1 to normal index
 	                      : 0 /*default to NW-FMC-PTA*/)
 	               : 0) &
 	          0x7)
@@ -110,7 +110,7 @@ void FENIMPlusInterfaceV1::configure(void)
 	           ? (optionalLink.getNode("ExternalClockSource").getValue<unsigned int>()
 	                  ? (optionalLink.getNode("ExternalClockSource")
 	                         .getValue<unsigned int>() -
-	                     1) //subtract 1 to normal index
+	                     1)  //subtract 1 to normal index
 	                  : 0 /*default to NW-FMC-PTA*/)
 	           : 0) &
 	      0x7)
@@ -362,8 +362,8 @@ void FENIMPlusInterfaceV1::configure(void)
 		    writeBuffer,
 		    /**address */ 0x6,
 		    /**data */ sel_ctl_register_);  // setup raw input selection muxes, assume the
-		                                  // logic_control_register was 0 before this.
-		                                  // (cleared at start of configure)
+		                                    // logic_control_register was 0 before this.
+		                                    // (cleared at start of configure)
 		OtsUDPHardware::write(writeBuffer);
 
 		__CFG_COUT__ << "Writing 40 MHz clock delay." << __E__;
@@ -1114,7 +1114,7 @@ void FENIMPlusInterfaceV1::stop(void)
 	    writeBuffer,
 	    /**address */ 0x4,
 	    /**data */ 0x33);  // only reset signorm  0x33); //reset output channel blocks
-	                     // synchronously
+	                       // synchronously
 	OtsUDPHardware::write(writeBuffer);
 }
 

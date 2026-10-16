@@ -123,7 +123,7 @@ void FENIMPlusInterface::configure(void)
 		                          .getValue<unsigned int>()
 		                      ? (optionalLink.getNode("ExternalClockSource")
 		                             .getValue<unsigned int>() -
-		                         1) //subtract 1 to normal index
+		                         1)  //subtract 1 to normal index
 		                      : 0 /*default to NW-FMC-PTA*/)
 		               : 0) &
 		          0x7)
@@ -140,7 +140,7 @@ void FENIMPlusInterface::configure(void)
 		           ? (optionalLink.getNode("ExternalClockSource").getValue<unsigned int>()
 		                  ? (optionalLink.getNode("ExternalClockSource")
 		                         .getValue<unsigned int>() -
-		                     1) //subtract 1 to normal index
+		                     1)  //subtract 1 to normal index
 		                  : 0 /*default to NW-FMC-PTA*/)
 		           : 0) &
 		      0x7)
@@ -216,8 +216,9 @@ void FENIMPlusInterface::configure(void)
 		// addresses sig_norm and 2 veto channeling
 		// write 3 to disable and reset
 
-		OtsUDPFirmwareCore::writeAdvanced(
-		    writeBuffer, /**address */ addrOffset + 0x4, /**data */ 0x3);  // disable sig norm
+		OtsUDPFirmwareCore::writeAdvanced(writeBuffer,
+		                                  /**address */ addrOffset + 0x4,
+		                                  /**data */ 0x3);  // disable sig norm
 		OtsUDPHardware::write(writeBuffer);
 
 		OtsUDPFirmwareCore::writeAdvanced(
@@ -436,8 +437,8 @@ void FENIMPlusInterface::configure(void)
 		    writeBuffer,
 		    /**address */ addrOffset + 0x6,
 		    /**data */ sel_ctl_register_);  // setup raw input selection muxes, assume the
-		                                  // logic_control_register was 0 before this.
-		                                  // (cleared at start of configure)
+		                                    // logic_control_register was 0 before this.
+		                                    // (cleared at start of configure)
 		OtsUDPHardware::write(writeBuffer);
 
 		__CFG_COUT__ << "Writing 40 MHz clock delay." << __E__;
@@ -1247,8 +1248,8 @@ void FENIMPlusInterface::stop(void)
 	OtsUDPFirmwareCore::writeAdvanced(writeBuffer,
 	                                  /**address */ addrOffset + 0x4,
 	                                  /**data */ 0x33);  // only reset signorm  0x33);
-	                                                   // //reset output channel blocks
-	                                                   // synchronously
+	                                                     // //reset output channel blocks
+	                                                     // synchronously
 	OtsUDPHardware::write(writeBuffer);
 }
 
@@ -1653,8 +1654,9 @@ void FENIMPlusInterface::initDAC(void)
 	OtsUDPHardware::write(writeBuffer);
 
 	writeBuffer.resize(0);
-	OtsUDPFirmwareCore::writeAdvanced(
-	    writeBuffer, /**address */ addrOffset + 0x0, /**data */ 0x8003);  // Set VDD as Ref
+	OtsUDPFirmwareCore::writeAdvanced(writeBuffer,
+	                                  /**address */ addrOffset + 0x0,
+	                                  /**data */ 0x8003);  // Set VDD as Ref
 	OtsUDPHardware::write(writeBuffer);
 	writeBuffer.resize(0);
 	OtsUDPFirmwareCore::writeAdvanced(

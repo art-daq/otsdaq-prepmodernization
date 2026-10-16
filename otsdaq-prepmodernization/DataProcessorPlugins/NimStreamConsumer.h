@@ -5,9 +5,9 @@
 //#include "otsdaq/Configurable/Configurable.h"
 #include "otsdaq-utilities/Visualization/VisualVConsumer.h"
 
+#include <map>
 #include <string>
 #include <vector>
-#include <map>
 
 namespace ots
 {
